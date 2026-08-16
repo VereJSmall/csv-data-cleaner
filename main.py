@@ -11,11 +11,27 @@ with open("data/messy_data.csv", newline="") as file:
 
         seen = set()
 
+        records_read = 0
+        records_written = 0
+        duplicates_removed = 0
+
         for row in reader:
+            records_read += 1
             name = row[0].title()
             email = row[1].lower()
             state = row[2].upper()
+            customer = (name, email, state)
 
-            if name not in seen:
-                seen.add(name)
+            if customer not in seen:
+                seen.add(customer)
                 writer.writerow([name, email, state])
+                records_written += 1
+            else:
+                duplicates_removed += 1
+
+
+print(
+    f"CSV Data Cleaner complete!\n"
+    f"Records Read: {records_read}\n"
+    f"Records written: {records_written}\n"
+    f"Duplicates removed: {duplicates_removed}")
