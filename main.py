@@ -34,7 +34,7 @@ try:
                     duplicates_removed += 1
 
     print(
-        f"CSV Data Cleaner complete!\n"
+        f"CSV Data Cleaner Complete!\n"
         f"Records Read: {records_read}\n"
         f"Records Written: {records_written}\n"
         f"Duplicates removed: {duplicates_removed}")
