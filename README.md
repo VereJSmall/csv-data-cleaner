@@ -1,7 +1,5 @@
 # CSV Data Cleaner
 
-## Overview
-
 A Python application that cleans customer CSV files by formatting data, removing duplicate records, and exporting a clean dataset.
 
 ## Features
